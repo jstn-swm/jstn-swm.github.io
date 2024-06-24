@@ -7,6 +7,32 @@
     <!--No style sheet yet<link href="css/style.css" rel="stylesheet">-->
   </head>
   <body>
-    <h1 style="text-align:center;padding:10% 0">You're Gay</h1>
+    <style>
+      body {
+        background-color: #0e1111;
+      }
+      .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1vw;
+        height: 100vh;
+      }
+      .item {
+        padding: 1%; /* percent is the percentage of the parent */
+        overflow: hidden;
+      }
+    </style>
+    <div class="center">
+      <link rel="stylesheet" href="./shinybutton.css">
+      <!--1st Item Leetcode-->
+      <div class="item">
+        <a href="https://leetcode.com/problemset/" class="btn-shine">LeetCode</a>
+      </div>
+      <!--2nd Item NeetCode-->
+      <div class="item">
+        <a href="https://neetcode.io/roadmap" class="btn-shine">NeetCode</a>
+      </div>
   </body>
 </html>
