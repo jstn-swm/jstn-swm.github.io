@@ -10,18 +10,25 @@
     <style>
       body {
         background-color: #0e1111;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        align-content: center;
+        flex-direction: column;
+
       }
       .center {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        margin: 1vw;
-        height: 100vh;
+        padding:0%;
+        width: min-content;
+        margin: auto;
+        /* border: red solid; */
       }
       .item {
-        padding: 1%; /* percent is the percentage of the parent */
-        overflow: hidden;
+        margin:10px;
+        overflow: visible;
       }
     </style>
     <div class="center">
