@@ -1,12 +1,20 @@
 body::before {
+    content: "";
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(./Resources/glowing-violet-jellyfish-dam7jbdgdlw5izbn.gif);
     background-size: cover;
-    filter: blur(5px);
+    filter: blur(50px);
     z-index: -1;
     /* Place the pseudo-element behind the content */
 }
 body {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     display:flex;
     flex-direction: row;
     background-color: #0e1111;
@@ -14,16 +22,29 @@ body {
     height: 100vh;
     width: 100vw;
 }
-.center {
+#center {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding:0%;
-    width: min-content;
     margin: auto;
-    /* border: red solid; */
 }
 .item {
     margin:10px;
     overflow: visible;
+}
+.containerWrapper {
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+}
+.container {
+    position: absolute;
+    border: 1px grey solid;
+    border-radius: 32px;
+    width: 100%;
+    height: calc(60vh * 1/2);
+    min-width: min-content;
+    min-height: min-content;
 }
