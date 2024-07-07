@@ -34,7 +34,7 @@ body {
 .button-28 {
     appearance: none;
     background-color: transparent;
-    border: 2px solid #1A1A1A;
+    border: 2px solid grey;
     border-radius: 15px;
     box-sizing: border-box;
     color: #cccccc;
