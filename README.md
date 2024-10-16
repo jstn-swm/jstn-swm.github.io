@@ -1,1 +1,0 @@
-# jstn-swm.github.io
