@@ -1,0 +1,40 @@
+body {
+    background-color: black
+}
+main {
+    margin: 10%;
+}
+#Name {
+    grid-area: Name;
+}
+#Objective {
+    grid-area: Obj;
+}
+#WorkExperience {
+    grid-area: WorkXp;
+}
+#Education {
+    grid-area: Edu;
+}
+#Certs {
+    grid-area: Certs;
+}
+#Languages {
+    grid-area: Lang;
+}
+#Skills {
+    grid-area: Skill;
+}
+@media(min-width: 600px) {
+    main {
+        display: grid;
+        grid-template:
+        "Name Name"
+        "Obj Obj"
+        "WorkXp Certs"
+        "WorkXp Certs"
+        "WorkXp Skill"
+        "Edu Lang"
+        ;
+    }
+}

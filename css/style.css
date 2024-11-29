@@ -1,0 +1,256 @@
+*, a {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    --highlight: #F2613F;
+    box-sizing: border-box;
+}
+#popup {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    background-color: #313031;
+    border-radius: 5%;
+}
+#confirmationBtn {
+    background-color: transparent;
+    border: none;
+    padding: 7px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+    background-color: black;
+}
+h1 {
+    padding: 10px
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    grid-area: nav;
+    background-color: black; 
+}
+nav a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2%;
+}
+nav svg {
+    display: none;
+}
+nav a:hover {
+    box-shadow: 0 0 0 1px;
+}
+@keyframes buttonHoverAnimation {
+    form {
+        text-shadow: none;
+    }
+    to {
+        text-shadow: 0px 3px 15px white;
+    }
+}
+button.details {
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    float: right;
+}
+button.details:hover {
+    box-shadow: 0 0 0 1px;
+}
+body {
+    position: relative;
+    background-color: white;
+    margin: 0%; /* Must keep */
+}
+body::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+main {
+    grid-area: main;
+}
+.borderAni-1{
+    border-image-slice: 1;
+    border-width: 1px;
+    animation: gradientAnimation 7s ease infinite;
+    border-style: solid;
+}
+@keyframes gradientAnimation {
+    0% {
+		border-image-source: linear-gradient(-45deg, white, black)
+	}
+	30% {
+		border-image-source: linear-gradient(45deg, white, black);
+	}
+    60% {
+        border-image-source: linear-gradient(135deg, white, black);
+    }
+    90% {
+        border-image-source: linear-gradient(225deg, white, black);
+    }
+    100% {
+        border-image-source: linear-gradient(-45deg, white, black); 
+    }
+}
+.card-1 {
+    margin: 10%;
+    padding: 10px;
+    /* width: 80%;
+    margin-left: auto;
+    margin-right: auto; */
+}
+#projects {
+    padding: 10px;
+    overflow: hidden;
+}
+.projectsCover {
+    position: relative;
+    width: 150px;
+    margin: 5px;
+    float: left;
+    height: 230px;
+    /* border: 1px red solid; */
+}
+.projectsCover img:nth-child(1) {
+    position: relative;
+    display: block;
+    width: 80%;
+}
+.projectsCover img:nth-child(2) {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 100px;
+}
+.card-2 {
+    background-color: black;
+    padding: 10%;
+    margin-bottom: 10%;
+}
+hr {
+    margin: 0;
+}
+.hr-1 {
+    display: flex;
+    width: 3rem;
+    margin: 0;
+    border-color: var(--highlight);
+}
+#contact-info {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ContactMe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10%;
+}
+#ContactMe * {
+    border: none;
+}
+#ContactMe input[type="submit"] {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    box-shadow: none;
+}
+#ContactMe input[type="submit"]:hover {
+    box-shadow: 0 0 0 1px;
+}
+form {
+    display: grid;
+}
+input {
+    color: black;
+}
+textarea {
+    color: black;
+}
+footer {
+    /* padding-bottom: 2vh; */
+    background-color: black;
+    grid-area: footer;
+}
+footer p {
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+#gallery {
+    margin-bottom: 100px;
+    text-decoration: none;
+    list-style-type: none;
+}
+#gallery span {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 3s ease-in-out;
+	left: -1000px;
+}
+#gallery a:hover span {
+	position: absolute;
+	top: 200px; left: 280px;
+	text-align: center;
+	opacity: 1;
+}
+@media(min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template: "header nav nav" 100px
+        "main main main"
+        "footer footer footer";
+    }
+    header {
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav a {
+        width: auto;
+    }
+    nav a:hover {
+        box-shadow: none;
+        animation: buttonHoverAnimation 1s ease forwards;
+    }
+    nav svg {
+        display: block;
+    }
+}
