@@ -9,12 +9,7 @@ main {
 }
 .card-1 {
 }
-@font-face {
-    font-family: 'Peace Sans';
-    src: url(../peace_sans/Peace\ Sans\ Webfont.ttf) format('truetype'), url(../peace_sans/Peace\ Sans.otf) format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
+
 h1 {
     letter-spacing: .15rem;
     font-size: large;

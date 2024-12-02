@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        let date = new Date();
+        $(document).ready(function() {
+            $('p').html(`${date.getFullYear()} - ${String(date.getDate()).padStart(2, '0')} `);
+        })
+    </script>
+    <style>
+        h2 {
+            /* color: black; */
+            text-shadow: 
+                    2px 2px 0 white,
+                    -2px 2px 0 white,
+                    2px -2px 0 white,
+                    -2px -2px 0 white,
+                    2px 0 0 white,
+                    -2px 0 0 white,
+                    0 2px 0 white,
+                    0 -2px 0 white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meow</h1>
+        <hr class="hr-2">
+        <p id="date">Date</p>
+    </header>
+    <main>
+        <h2>冰淇淋</h2>
+        <div id="imgContainer">
+            <img src="./img/subject.png" alt="subject">
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,9 +1,16 @@
+
 *, a {
     font-family: Helvetica, sans-serif;
     color: white;
     text-decoration: none;
     --highlight: #F2613F;
     box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Peace Sans';
+    src: url(../peace_sans/Peace\ Sans\ Webfont.ttf) format('truetype'), url(../peace_sans/Peace\ Sans.otf) format('otf');
+    font-weight: normal;
+    font-style: normal;
 }
 #popup {
     display: none;
@@ -22,13 +29,13 @@
 }
 header {
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     grid-area: header;
-    background-color: black;
 }
 h1 {
-    padding: 10px
+    margin: 0;
 }
 nav {
     display: flex;
@@ -36,7 +43,6 @@ nav {
     align-items: center;
     padding: 5%;
     grid-area: nav;
-    background-color: black; 
 }
 nav a {
     display: flex;
@@ -73,6 +79,7 @@ body {
     position: relative;
     background-color: white;
     margin: 0%; /* Must keep */
+    height: 100%;
 }
 body::before {
     content: "";
@@ -155,6 +162,9 @@ hr {
     width: 3rem;
     margin: 0;
     border-color: var(--highlight);
+}
+.hr-2 {
+    flex-grow: 1;
 }
 #contact-info {
     list-style-type: none;
