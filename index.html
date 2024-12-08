@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Website</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styleBackground.css">
+    <script src="./js/audioControl.js" defer></script>
 </head>
 <body>
     <img src="./img/earth.png" alt="earth" id="earth">
@@ -35,11 +38,29 @@
             <p>
                 I am a 19 year old Student currently studying Computer Science at <i>Langara College Vancouver, Canada</i>. My programming experiences: Java, C++, HTML, CSS, and Python. My hobbies are Swimming and Weight Training, and I love travelling.
             </p>
-            <audio controls>
-                <source src="./audio/introduction.mp3" type="audio/mpeg">
-                <source src="./audio/introduction.ogg" type="audio/ogg">
-                <a href="./audio/introduction.mp3"download>Download MP3</a>
-            </audio>
+
+
+
+
+            <h3>Fav Song</h3>
+
+            <i class=""></i>
+            <div id="audioContainer" class="">
+                <audio>
+                    <source src="./audio/everything, everywhere (feat. eaJ).mp3" type="audio/mpeg">
+                </audio>
+                <button class="play-pause">
+                    <i class="fa fa-play"></i>
+                    <i class="fa fa-pause"></i>
+                </button>
+                <button><i class="fa fa-volume-full"></i></button>
+                <button><i class="fa fa-forward"></i></button>
+            </div>
+
+
+
+
+
         </div>
         <div class="borderAni-1 card-1" id="projects">
             <div class="projectsCover">

@@ -1,10 +1,13 @@
 
 *, a {
-    font-family: 'Peace Sans', Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif, 'Times New Roman', Times;
     color: white;
     text-decoration: none;
     --highlight: #F2613F;
     box-sizing: border-box;
+}
+h1, h2, h3 {
+    font-family: 'Peace Sans', Helvetica, sans-serif;
 }
 @font-face {
     font-family: 'Peace Sans';
@@ -233,6 +236,26 @@ footer a {
 	top: 200px; left: 280px;
 	text-align: center;
 	opacity: 1;
+}
+#audioContainer {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+#audioContainer button {
+    background: none;
+    border: none;
+    color: inherit;
+    height: 30px;
+    width: 30px;
+    font-size: 1.1rem;
+}
+#audioContainer.paused button .fa-play {
+    display: none;
+}
+#audioContainer:not(.paused) button .fa-pause {
+    display: none;
 }
 @media(min-width: 600px) {
     body {
