@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.css">
+    <title>Landing Page</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styleBackground.css">
     <script src="./js/audioControl.js" defer></script>
+    <script src="./js/slideShow.js" defer></script>
 </head>
 <body>
     <img src="./img/earth.png" alt="earth" id="earth">
@@ -35,17 +35,57 @@
         <div class="card-2" id="about">
             <h2>About</h2>
             <hr class="hr-1">
-            <p>
-                I am a 19 year old Student currently studying Computer Science at <i>Langara College Vancouver, Canada</i>. My programming experiences: Java, C++, HTML, CSS, and Python. My hobbies are Swimming and Weight Training, and I love travelling.
-            </p>
-
-
-
-
-            <h3>Fav Song</h3>
-
-            <i class=""></i>
-            <div id="audioContainer" class="">
+            <div id="profile">
+                <img src="./img/IMG_5275.png" alt="profilPicture" draggable="false">
+                <p>
+                    I am a 19 year old Student currently studying Computer Science at <i>Langara College Vancouver, Canada</i>. My programming experiences: Java, C++, HTML, CSS, and Python. My hobbies are Swimming and Weight Training, and I love travelling.
+                </p>
+            </div>
+            <div id="Instagram">
+                <div id="pfp">
+                    <a href="https://www.instagram.com/p/Cb_5PYYLvV1/" alt="InstagramLink"><img src="https://cdn.inflact.com/media/455677299_3811854912437536_2960811207732351607_n.jpg?url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.2885-19%2F455677299_3811854912437536_2960811207732351607_n.jpg%3Fstp%3Ddst-jpg_s150x150_tt6%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_cat%3D104%26_nc_ohc%3DTby95dK3gmIQ7kNvgEmCR7i%26_nc_gid%3Dcb174698b0c84f0280e2b613a5a8fea5%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AYCNxw37RlAiL3Zf2aDNLHHmZqDus7GEAnEdT1De8MVjTw%26oe%3D675CFCCB%26_nc_sid%3D10d13b&time=1733767200&key=3f27b3b2b38ae5de5e6f7fc99642e63b" alt="InstagramProfilePicture"></a>
+                    <a href="https://www.instagram.com/p/Cb_5PYYLvV1/"><i class="fa-brands fa-instagram"></i>@Justin.Wang1214</a>
+                </div>
+                <ul id="gallery">
+                    <li><a href="./img/Media1.jpg"><img src="img/Media1.jpg" width="100" height="75" alt="SnowboardThumbnail">  
+                        <span><img src="img/Media1.jpg" width="400" height="300" alt="Snowboard"><br>Snowboard Picture</span></a>  
+                    </li>
+                    <li><a href="./img/Media2.jpg"><img src="img/Media2.jpg" width="100" height="75" alt="GraduationThumbnail">  
+                        <span><img src="img/Media2.jpg" width="auto" height="300" alt="Graduation"><br>Graduation Picture</span></a>  
+                    </li>
+                    <li>
+                        <a href="./img/VideoThumbnail.png"><img src="./img/VideoThumbnail.png" width="100" height="75" alt="VideoThumbnail">
+                            <span><video src="./video/Media3.mp4" width="auto" height="300" type="video/mp4" controls></video></span></a>
+                    </li>
+                </ul>
+            </div>
+            <h3>My Favourite Song</h3>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <div class="numberSlide fade"><span>1</span> / 3</div>
+                    <img src="https://i.scdn.co/image/ab67616d0000b27376bd7a843cc7669ff47efd9d" alt="SingleCover">
+                    <div class="text">Single's Cover</div>
+                </div>
+                <div class="slide">
+                    <div class="numberSlide fade"><span>2</span> / 3</div>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRlrnN9xHT5noYzHD1wD31Qn_qFuPVHXUVeCtR5StMDytIZDXY1IilRuR77-J0BYq3KIQ2QsBokylSAC9wxFXPO0w" alt="VaultBoyPotrait">
+                    <div class="text">Artist: Vault Boy</div>
+                </div>
+                <div class="slide">
+                    <div class="numberSlide fade"><span>3</span> / 3</div>
+                    <img src="https://i.scdn.co/image/ab6761610000e5eb883bb74e21b372eb01f01d23" alt="eaJPotrait">
+                    <div class="text">and Artist: eaJ</div>
+                </div>
+                <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
+                <a onclick="plusSlides(1)" class="next">&#10095;</a>
+            </div>
+            <br>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div id="audioContainer">
                 <audio>
                     <source src="./audio/everything, everywhere (feat. eaJ).mp3" type="audio/mpeg">
                 </audio>
@@ -53,9 +93,64 @@
                     <i class="fa fa-play"></i>
                     <i class="fa fa-pause"></i>
                 </button>
-                <button><i class="fa fa-volume-full"></i></button>
-                <button><i class="fa fa-forward"></i></button>
+                <input type="range" name="TrackTime" id="TrackTime" min="0" value="0" step="0.1">
+                <p id="timeline"></p>
+                <div id="VolumeContainer"></i><input type="range" name="Volume" id="Volume" min="0" max="100" value="50"><i id="volumeIcon" class="fa-solid fa-volume-high"></i></div>
             </div>
+            <details id="lyrics">
+                <summary>Lyrics</summary>
+                    <pre>
+Movie screen, can't help but see you in
+Every scene, guy gets the girl, I wish
+That was me, the way that they held on to love
+Love, I
+I don't wanna miss you, God, I wanna kiss you
+I don't even wanna think about it
+Running circles 'round the reasons that you left
+And I can't even seem to get around it
+Ending scene, I know this is how it's
+Supposed to be and it's haunting me now
+Tell me why I'm stuck in a
+Time loop while the pendulum
+Swings on by, tell me why
+I see you in everything, everywhere
+All the time, you follow me like a shadow
+From you, there's nowhere that I can hide
+Life here without you's so shallow
+And I wanna call you, but I don't
+Ever wanna be the reason for tears that you cry
+Everything, everywhere, all the time
+Wish I could forget you, but I won't
+You're everything, everywhere
+It's killing me, the end of us felt like the
+End of me, can't even escape you
+Inside my dreams, wish I could put this to rest
+Yeah, I-I-I
+I don't wanna miss you, God, I wanna kiss you
+I don't even wanna breathe
+No, I'm not the person that I should've been
+Never gave you what you need
+Oh, I ended things, think I'll regret it
+Eternally, and it's haunting me now
+Tell me why, I'm stuck in a
+Time loop while the pendulum
+Swings on by, tell me why I
+See you in everything, everywhere
+All the time, you follow me like a shadow
+From you, there's nowhere that
+I can hide, life here without you's so shallow (without you's so shallow)
+And I wanna call you, but I don't
+Ever wanna be the reason for tears that you cry
+Everything, everywhere, all the time
+Wish I could forget you, but I won't
+You're everything, everywhere
+Oh (you follow me like a shadow), oh-oh-oh
+Everything, everywhere
+Oh no, oh no, oh no, oh-oh
+Oh, no, oh, no, oh, no, oh-oh-oh
+You follow me like a shadow
+                    </pre>
+            </details>
 
 
 

@@ -1,4 +1,6 @@
-
+:root {
+    overflow-x: hidden;
+}
 *, a {
     font-family: Helvetica, sans-serif, 'Times New Roman', Times;
     color: white;
@@ -6,8 +8,8 @@
     --highlight: #F2613F;
     box-sizing: border-box;
 }
-h1, h2, h3 {
-    font-family: 'Peace Sans', Helvetica, sans-serif;
+h1, h2, h3, details {
+    font-family: 'Calibri', 'Helvetica', 'Times', sans-serif;
 }
 @font-face {
     font-family: 'Peace Sans';
@@ -125,9 +127,6 @@ main {
 .card-1 {
     margin: 10%;
     padding: 10px;
-    /* width: 80%;
-    margin-left: auto;
-    margin-right: auto; */
 }
 #projects {
     padding: 10px;
@@ -153,6 +152,10 @@ main {
     width: 100px;
 }
 .card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     background-color: black;
     padding: 10%;
     margin-bottom: 10%;
@@ -220,20 +223,47 @@ footer a {
     text-decoration: none;
     color: white;
 }
+#profile {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+#profile img{
+    height: 150px;
+    width: auto;
+    border: 1px #F2613F solid;
+    border-radius: 15%;
+}
+#pfp {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+#pfp img {
+    border-radius: 15%;
+    border: white solid 1px;
+}
+#pfp i {
+    font-size: 2rem;
+}
 #gallery {
-    margin-bottom: 100px;
-    text-decoration: none;
+    height: 410px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
     list-style-type: none;
+    top: 0;
 }
 #gallery span {
-	position: absolute;
+    position: absolute;  
 	opacity: 0;
-	transition: opacity 3s ease-in-out;
-	left: -1000px;
+    left: -1000px;
 }
-#gallery a:hover span {
+#gallery li:hover span {  
 	position: absolute;
-	top: 200px; left: 280px;
+	top: 80px; left: 13%;
 	text-align: center;
 	opacity: 1;
 }
@@ -257,6 +287,150 @@ footer a {
 #audioContainer:not(.paused) button .fa-pause {
     display: none;
 }
+#TrackTime {
+    height: 7px;
+    border-radius: 20px 20px 20px 20px;
+    flex: 1;
+    appearance: none;
+    -webkit-appearance: none;
+}
+#TrackTime::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+
+}
+#VolumeContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50px);
+    gap: 5px;
+}
+#VolumeContainer i {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+}
+#Volume {
+    opacity: 0;
+    writing-mode: vertical-rl;
+    -webkit-appearance: none;
+    appearance: none;
+    direction: rtl;
+    height: 100px;
+    width: 8px;
+    border-radius: 5px;
+    background: linear-gradient(to top, #F2613F 50%, #ccc 50%);
+    cursor: pointer;
+}
+#VolumeContainer:hover #Volume {
+    opacity: 100%;
+}
+#Volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#volumeIcon {
+    height: 30px;
+    width: 30px;
+}
+#lyrics summary {
+    font-size: 1.5rem;
+}
+#lyrics pre {
+    text-align: center;
+}
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: hidden; */
+}
+.slide {
+    display: none;
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+.slide img {
+    display: block;
+    width: 80%; /* Image width is 80% of the container */
+    height: 100%; /* Maintain aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    transition: 0.6s ease;
+    border-radius: 0, 3px 3px, 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px, 0, 0, 3px;
+}
+.prev:hover, .next:hover {
+    background-color: #F2613F;
+}
+.text {
+    text-align: center;
+    width: 100%;
+
+}
+.numberSlide {
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 0;
+    position: absolute;
+}
+.numberSlide span {
+    color: #F2613F;
+}
+.dots {
+    margin: 10px;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px, 2px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6 ease;
+}
+.active, .dot:hover {
+    background-color: #F2613F;
+}
+.fade {
+    animation: fade 1s linear forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media(min-width: 600px) {
     body {
         display: grid;
@@ -285,5 +459,23 @@ footer a {
     }
     nav svg {
         display: block;
+    }
+    #profile {
+        display: block;
+    }
+    #profile img {
+        margin: 2%;
+        float: left;
+    }
+    #audioContainer {
+        width: 600px !important;
+    }
+    #gallery {
+        height: 300px;
+        flex-direction: column;
+    }
+    #gallery li:hover span {  
+        top: 0px; left: 150px;
+        text-align: center;
     }
 }
