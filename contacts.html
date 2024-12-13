@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/validateForm.js" defer></script>
     <title>Contact Me</title>
+    <script src="./js/themeButton.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
         <a href="./index.html">Home</a>
         <a href="./resume.html">Resume</a>
         <a href="./contacts.html">Contacts</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg>
+        <button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button>
     </nav>
     <main>
         <ul id="contact-info">
@@ -30,6 +31,26 @@
             <li>Email: <a href="mailto:Justin.won1214@gmail.com">Justin.won1214@gmail.com</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/justin-wang04/">justin-wang04</a></li>
         </ul>
+        <div id="Instagram">
+            <div id="pfp">
+                <a href="https://www.instagram.com/p/Cb_5PYYLvV1/"><img src="https://cdn.inflact.com/media/455677299_3811854912437536_2960811207732351607_n.jpg?url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.2885-19%2F455677299_3811854912437536_2960811207732351607_n.jpg%3Fstp%3Ddst-jpg_s150x150_tt6%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_cat%3D104%26_nc_ohc%3DTby95dK3gmIQ7kNvgEmCR7i%26_nc_gid%3Dcb174698b0c84f0280e2b613a5a8fea5%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AYCNxw37RlAiL3Zf2aDNLHHmZqDus7GEAnEdT1De8MVjTw%26oe%3D675CFCCB%26_nc_sid%3D10d13b&time=1733767200&key=3f27b3b2b38ae5de5e6f7fc99642e63b" alt="InstagramProfilePicture"></a>
+                <a href="https://www.instagram.com/p/Cb_5PYYLvV1/"><i class="fa-brands fa-instagram"></i>@Justin.Wang1214</a>
+            </div>
+            <ul id="gallery">
+                <li><a href="./img/Media1.jpg"><img src="img/Media1.jpg" width="100" height="75" alt="SnowboardThumbnail">  
+                    <span><img src="img/Media1.jpg" width="400" height="300" alt="Snowboard"><br>Snowboard Picture</span></a>  
+                </li>
+                <li><a href="./img/Media2.jpg"><img src="img/Media2.jpg" width="100" height="75" alt="GraduationThumbnail">  
+                    <span><img src="img/Media2.jpg" height="300" alt="Graduation"><br>Graduation Picture</span></a>  
+                </li>
+                <li>
+                    <a href="./img/VideoThumbnail.png"><img src="./img/VideoThumbnail.png" width="100" height="75" alt="VideoThumbnail">
+                    </a><span><video height="300" controls>
+                            <source src="./video/Media3.mp4" type="video/mp4">
+                        </video></span>
+                </li>
+            </ul>
+        </div>
         <form name="contactMe" id="contactMe">
             <label for="Name">Name:</label>
             <input type="text" name="Name" id="Name">

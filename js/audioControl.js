@@ -1,3 +1,6 @@
+let computedStyles = getComputedStyle(document.documentElement);
+let background = computedStyles.getPropertyValue('--background').trim();
+let secondary = computedStyles.getPropertyValue('--highlight').trim();
 let audioControl = document.querySelector('audio');
 let audioContainer = document.querySelector('#audioContainer')
 let playPauseBtn = document.querySelector('#audioContainer .play-pause');
@@ -36,7 +39,7 @@ volumeSlider.addEventListener('input', function(e) {
     let value = e.currentTarget.value;
     setImage(value);
     audioControl.volume = value / 100;
-    let gradient = `linear-gradient(to top, #F2613F ${value}%, #ccc ${value}%)`;
+    let gradient = `linear-gradient(to top, ${secondary} ${value}%, ${background} ${value}%)`;
     volumeSlider.style.background = gradient;
 });
 
@@ -51,7 +54,7 @@ function formatTime(seconds) {
 audioControl.addEventListener('timeupdate', () => {
     trackTime.value = (audioControl.currentTime / audioControl.duration) * 100;
     trackPlayTime.innerHTML = `${formatTime(audioControl.currentTime)}`;
-    trackTime.style.background = `linear-gradient(to right, #F2613F ${trackTime.value}%, #FFFFFF ${trackTime.value}%)`;
+    trackTime.style.background = `linear-gradient(to right, ${secondary} ${trackTime.value}%, #FFFFFF ${trackTime.value}%)`;
 });
 
 

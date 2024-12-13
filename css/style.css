@@ -1,11 +1,18 @@
 :root {
     overflow-x: hidden;
+    --background: black;
+    --secondary: white;
+    --highlight: #F2613F;
+    --greyBG: #313031;
+}
+html, body {
+    background-color: var(--background);
+    height: 100%;
 }
 *, a {
     font-family: Helvetica, sans-serif, 'Times New Roman', Times;
-    color: white;
+    color: var(--secondary);
     text-decoration: none;
-    --highlight: #F2613F;
     box-sizing: border-box;
 }
 h1, h2, h3, details {
@@ -17,6 +24,13 @@ h1, h2, h3, details {
     font-weight: normal;
     font-style: normal;
 }
+#themeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+}
 #popup {
     display: none;
     flex-direction: column;
@@ -24,7 +38,7 @@ h1, h2, h3, details {
     align-items: center;
     position: absolute;
     z-index: 100;
-    background-color: #313031;
+    background-color: var(--greyBG);
     border-radius: 5%;
 }
 #confirmationBtn {
@@ -55,18 +69,18 @@ nav a {
     width: 100%;
     padding: 2%;
 }
-nav svg {
-    display: none;
-}
 nav a:hover {
     box-shadow: 0 0 0 1px;
+}
+form {
+    margin: 10% 5%;
 }
 @keyframes buttonHoverAnimation {
     form {
         text-shadow: none;
     }
     to {
-        text-shadow: 0px 3px 15px white;
+        text-shadow: 0px 3px 15px var(--secondary);
     }
 }
 button.details {
@@ -82,14 +96,12 @@ button.details:hover {
 }
 body {
     position: relative;
-    background-color: white;
     margin: 0%; /* Must keep */
     height: 100%;
 }
 body::before {
     content: "";
     position: absolute;
-    background-color: black;
     background-repeat: no-repeat;
     height: 100%;
     top: 0;
@@ -109,26 +121,26 @@ main {
 }
 @keyframes gradientAnimation {
     0% {
-		border-image-source: linear-gradient(-45deg, white, black)
+		border-image-source: linear-gradient(-45deg, var(--highlight), var(--background))
 	}
 	30% {
-		border-image-source: linear-gradient(45deg, white, black);
+		border-image-source: linear-gradient(45deg, var(--secondary), var(--background));
 	}
     60% {
-        border-image-source: linear-gradient(135deg, white, black);
+        border-image-source: linear-gradient(135deg, var(--secondary), var(--background));
     }
     90% {
-        border-image-source: linear-gradient(225deg, white, black);
+        border-image-source: linear-gradient(225deg, var(--secondary), var(--background));
     }
     100% {
-        border-image-source: linear-gradient(-45deg, white, black); 
+        border-image-source: linear-gradient(-45deg, var(--highlight), var(--background)); 
     }
 }
 .card-1 {
     margin: 10%;
     padding: 10px;
 }
-#projects {
+.projects {
     padding: 10px;
     overflow: hidden;
 }
@@ -155,10 +167,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    background-color: black;
     padding: 10%;
-    margin-bottom: 10%;
+    margin: 10% 0;
+    border-radius: 30px;
 }
 hr {
     margin: 0;
@@ -193,7 +204,7 @@ hr {
 }
 #ContactMe input[type="submit"] {
     background-color: transparent;
-    color: white;
+    color: var(--secondary);
     padding: 10px;
     box-shadow: none;
 }
@@ -210,8 +221,7 @@ textarea {
     color: black;
 }
 footer {
-    /* padding-bottom: 2vh; */
-    background-color: black;
+    background-color: var(--background);
     grid-area: footer;
 }
 footer p {
@@ -221,20 +231,31 @@ footer p {
 }
 footer a {
     text-decoration: none;
-    color: white;
+    color: var(--secondary);
 }
 #profile {
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #profile img{
     height: 150px;
     width: auto;
-    border: 1px #F2613F solid;
+    border: 1px var(--highlight) solid;
     border-radius: 15%;
+}
+#profile div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    width: 80%;
+    clear: left;
+}
+#Instagram {
+    width: fit-content;
+    margin: 10% auto;
 }
 #pfp {
     display: flex;
@@ -243,7 +264,7 @@ footer a {
 }
 #pfp img {
     border-radius: 15%;
-    border: white solid 1px;
+    border: var(--secondary) solid 1px;
 }
 #pfp i {
     font-size: 2rem;
@@ -323,7 +344,7 @@ footer a {
     height: 100px;
     width: 8px;
     border-radius: 5px;
-    background: linear-gradient(to top, #F2613F 50%, #ccc 50%);
+    background: linear-gradient(to top, var(--highlight) 50%, #ccc 50%);
     cursor: pointer;
 }
 #VolumeContainer:hover #Volume {
@@ -344,6 +365,7 @@ footer a {
 }
 #lyrics summary {
     font-size: 1.5rem;
+    margin: 2rem;
 }
 #lyrics pre {
     text-align: center;
@@ -376,7 +398,7 @@ footer a {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: var(--secondary);
     transition: 0.6s ease;
     border-radius: 0, 3px 3px, 0;
     user-select: none;
@@ -386,7 +408,7 @@ footer a {
     border-radius: 3px, 0, 0, 3px;
 }
 .prev:hover, .next:hover {
-    background-color: #F2613F;
+    background-color: var(--highlight);
 }
 .text {
     text-align: center;
@@ -400,7 +422,7 @@ footer a {
     position: absolute;
 }
 .numberSlide span {
-    color: #F2613F;
+    color: var(--highlight);
 }
 .dots {
     margin: 10px;
@@ -417,7 +439,7 @@ footer a {
     transition: background-color 0.6 ease;
 }
 .active, .dot:hover {
-    background-color: #F2613F;
+    background-color: var(--highlight);
 }
 .fade {
     animation: fade 1s linear forwards;
@@ -477,5 +499,10 @@ footer a {
     #gallery li:hover span {  
         top: 0px; left: 150px;
         text-align: center;
+    }
+    #themeBtn {
+        position: relative;
+        top: auto;
+        right: auto;
     }
 }
