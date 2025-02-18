@@ -6,164 +6,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.css">
     <title>Landing Page</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/styleBackground.css">
-    <script src="./js/audioControl.js" defer></script>
-    <script src="./js/slideShow.js" defer></script>
-    <script src="./js/themeButton.js" defer></script>
-    <meta name="description" content="This is a portfolio page for CPSC1030, a introduction of my character featuring my favourite song and movies I've recently watched with links.">
+    <meta name="description" content="Justin Wang personal portfolio page">
 </head>
 <body>
-    <img src="./img/earth.png" alt="earth" id="earth">
+    <img src="./img/engin-akyurt-vJ0zS3nfmwU-unsplash-removebg-preview.png" alt="subject" id="subject">
     <header>
-        <a href="./index.html"><h1>Course Project</h1></a>
+        <a href="./index.html"><h1>Syzygy</h1></a>
+        <div id="banner"></div>
     </header>
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./resume.html">Resume</a>
-        <a href="./contacts.html">Contacts</a>
-        <button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./contacts.html">Contacts</a></li>
+            <li><button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button></li>
+        </ul>
     </nav>
     <main>
-        <div class="borderAni-1 card-1 projects">
-            <div class="projectsCover">
-                <img src="./img/Img1BG.jpg" alt="cover">
-                <img src="./img/img1-removebg.png" alt="subject">
-            </div>
-            <h2>Projects</h2>
-            <hr class="hr-1">
-            <p>Projects section, expand to see projects from CPSC1030.</p>
-            <button class="details" onclick="location.href='./projects.html'">View Project</button>
-        </div>
-        <div class="card-2" id="about">
-            <h2>About</h2>
-            <hr class="hr-1">
-            <div id="profile">
-                <img src="./img/IMG_5275.png" alt="profilPicture" draggable= "false">
-                <p>I am a 19 year old Student currently studying Computer Science at Langara College Vancouver, Canada. Also pursuing as a Lifeguard</p>    
-                <div>
-                    <b>My programming experiences:</b>
-                    <ul>
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>HTML & CSS</li>
-                        <li>Javascript</li>
-                        <li>Python</li>
-                    </ul>
-                    <b>My hobbies are:</b>
-                    <ul>
-                        <li>Swimming</li>
-                        <li>Weight Training</li>
-                        <li>I love travelling</li>
-                    </ul>
-                </div>
-            </div>
-            <h3>My Favourite Song</h3>
-            <div class="slideshow-container">
-                <div class="slide">
-                    <div class="numberSlide fade"><span>1</span> / 3</div>
-                    <img src="https://i.scdn.co/image/ab67616d0000b27376bd7a843cc7669ff47efd9d" alt="SingleCover">
-                    <div class="text">Single's Cover</div>
-                </div>
-                <div class="slide">
-                    <div class="numberSlide fade"><span>2</span> / 3</div>
-                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRlrnN9xHT5noYzHD1wD31Qn_qFuPVHXUVeCtR5StMDytIZDXY1IilRuR77-J0BYq3KIQ2QsBokylSAC9wxFXPO0w" alt="VaultBoyPotrait">
-                    <div class="text">Artist: Vault Boy</div>
-                </div>
-                <div class="slide">
-                    <div class="numberSlide fade"><span>3</span> / 3</div>
-                    <img src="https://i.scdn.co/image/ab6761610000e5eb883bb74e21b372eb01f01d23" alt="eaJPotrait">
-                    <div class="text">and Artist: eaJ</div>
-                </div>
-                <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
-                <a onclick="plusSlides(1)" class="next">&#10095;</a>
-            </div>
-            <br>
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <div id="audioContainer">
-                <audio>
-                    <source src="./audio/everythingEverywhere.mp3" type="audio/mpeg">
-                </audio>
-                <button class="play-pause">
-                    <i class="fa fa-play"></i>
-                    <i class="fa fa-pause"></i>
-                </button>
-                <input type="range" name="TrackTime" id="TrackTime" min="0" value="0" step="0.1">
-                <p id="timeline"></p>
-                <div id="VolumeContainer"><input type="range" name="Volume" id="Volume" min="0" max="100" value="50"><i id="volumeIcon" class="fa-solid fa-volume-high"></i></div>
-            </div>
-            <details id="lyrics">
-                <summary>Lyrics</summary>
-                    <pre>
-Movie screen, can't help but see you in
-Every scene, guy gets the girl, I wish
-That was me, the way that they held on to love
-Love, I
-I don't wanna miss you, God, I wanna kiss you
-I don't even wanna think about it
-Running circles 'round the reasons that you left
-And I can't even seem to get around it
-Ending scene, I know this is how it's
-Supposed to be and it's haunting me now
-Tell me why I'm stuck in a
-Time loop while the pendulum
-Swings on by, tell me why
-I see you in everything, everywhere
-All the time, you follow me like a shadow
-From you, there's nowhere that I can hide
-Life here without you's so shallow
-And I wanna call you, but I don't
-Ever wanna be the reason for tears that you cry
-Everything, everywhere, all the time
-Wish I could forget you, but I won't
-You're everything, everywhere
-It's killing me, the end of us felt like the
-End of me, can't even escape you
-Inside my dreams, wish I could put this to rest
-Yeah, I-I-I
-I don't wanna miss you, God, I wanna kiss you
-I don't even wanna breathe
-No, I'm not the person that I should've been
-Never gave you what you need
-Oh, I ended things, think I'll regret it
-Eternally, and it's haunting me now
-Tell me why, I'm stuck in a
-Time loop while the pendulum
-Swings on by, tell me why I
-See you in everything, everywhere
-All the time, you follow me like a shadow
-From you, there's nowhere that
-I can hide, life here without you's so shallow (without you's so shallow)
-And I wanna call you, but I don't
-Ever wanna be the reason for tears that you cry
-Everything, everywhere, all the time
-Wish I could forget you, but I won't
-You're everything, everywhere
-Oh (you follow me like a shadow), oh-oh-oh
-Everything, everywhere
-Oh no, oh no, oh no, oh-oh
-Oh, no, oh, no, oh, no, oh-oh-oh
-You follow me like a shadow
-                    </pre>
-            </details>
-
-
-
-
-
-        </div>
-        <div class="borderAni-1 card-1 projects">
-            <div class="projectsCover">
-                <img src="https://preview.redd.it/what-decade-of-cinema-have-you-watched-the-most-movies-i-v0-i6jbfewtqqoa1.jpg?width=640&crop=smart&auto=webp&s=14c2ddd38147a671169064eb7608ee9d9cdcbf8e" alt="cover">
-            </div>
-            <h2>Shows</h2>
-            <hr class="hr-1">
-            <p>See Shows and Movies. Enjoy 1080p movies without delay. Controls are work in progress.</p>
-            <button class="details" onclick="location.href='movies.html'">See More</button>
-        </div>
     </main>
     <footer>
         <hr>

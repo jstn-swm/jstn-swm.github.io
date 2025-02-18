@@ -6,7 +6,6 @@
     <meta name="description" content="This page contains the resume with dynamic layout">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styleResume.css">
-    <script src="./js/themeButton.js" defer></script>
     <title>Resume</title>
 </head>
 <body>
@@ -14,12 +13,25 @@
         <a href="./index.html"><h1>Course Project</h1></a>
     </header>
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./resume.html">Resume</a>
-        <a href="./contacts.html">Contacts</a>
-        <button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./resume.html">Resume</a></li>
+            <li><a href="./contacts.html">Contacts</a></li>
+            <li><button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button></li>
+        </ul>
     </nav>
     <main>
+        <div id="profile">
+            <img src="./img/IMG_5275.png" alt="profilPicture" draggable= "false">
+            <p id="bio">I am a 20 year old Student currently studying Computer Science at Langara College. Lifeguarding Certified</p>   
+            <h2>Personal Info</h2>
+            <p>Address</p>
+            <span>6870 Cedar Rose Crt Vancouver, BC V5J 5J7</span>
+            <p>Email</p>
+            <a href="mailto:justin.won1214+work@gmail.com">Justin.won1214+work@gmail.com</a>
+            <p>#</p>
+            <span>(778)-551-8589</span>
+        </div>
         <h1 id="Name">Justin Wang</h1>
         <div class="section" id="Objective">
             <h2>Objective</h2>
