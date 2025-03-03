@@ -205,7 +205,12 @@ footer hr {
     background-color: currentColor;
     border: none;
 }
-/* @media screen and (max-width: 600px) {
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+@media screen and (max-width: 600px) {
     nav ul {
         display: flex;
         flex-direction: column;
@@ -223,4 +228,4 @@ footer hr {
         justify-content: center;
         align-items: center;
     }
-} */
+}
