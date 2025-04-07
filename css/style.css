@@ -99,6 +99,10 @@ nav ul button {
     width: 300px;
     filter: grayscale(1) brightness(0.2);
 }
+
+:root[style*="--bg-primary: #f5f5f5"] #banner-subject {
+    filter: grayscale(1) brightness(0.8);
+}
 main {
     position: relative;
     flex: 1 0 auto;
