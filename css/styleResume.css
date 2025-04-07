@@ -49,8 +49,3 @@
     color: whitesmoke;
     box-shadow: 0 0 0 1px darkgoldenrod;
 }
-@media only screen and (max-width: 1000px) {
-    #profile img {
-        display: none;
-    }
-}

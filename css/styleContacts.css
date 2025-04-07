@@ -1,10 +1,4 @@
-.contact-info {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: var(--secondary-bg);
-    border-radius: 8px;
-}
-
+/* Gallery specific styles */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -44,36 +38,82 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav {
-    background-color: var(--background-secondary);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* Contact form and other components */
+.contact-info {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
 }
 
-nav ul {
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    gap: 1rem;
 }
 
-nav a {
-    color: var(--text-primary);
-    text-decoration: none;
+.form-group label {
+    min-width: 80px;
+    color: var(--accent-color);
 }
 
-nav a:hover {
-    text-decoration: underline;
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background-color: rgba(21, 21, 21, .3);
+    color: var(--accent-color);
+    font-size: 1rem;
+    transition: all 0.4s ease;
 }
 
+.form-group textarea {
+    min-height: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.form-group:has(textarea) {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.form-group:has(textarea) label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-hover);
+    box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.2);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    background-color: rgba(184, 134, 11, 0.1);
+}
+
+/* Slideshow styles */
 .slideshow-container {
     max-width: 800px;
     position: relative;
     margin: auto;
-    background: var(--background-secondary);
+    background: var(--bg-secondary);
     padding: 0;
     border-radius: 8px;
     overflow: hidden;
@@ -86,7 +126,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     height: 600px;
-    background: var(--background-secondary);
+    background: var(--bg-secondary);
 }
 
 .slides:first-child {
@@ -167,14 +207,14 @@ nav a:hover {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: var(--text-secondary);
+    background-color: var(--text-color);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: var(--text-primary);
+    background-color: var(--accent-color);
 }
 
 .fade {
@@ -187,91 +227,7 @@ nav a:hover {
     to {opacity: 1}
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: var(--background-secondary);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.form-group label {
-    min-width: 80px;
-    color: darkgoldenrod;
-}
-
-.form-group input,
-.form-group textarea {
-    flex: 1;
-    padding: 0.75rem;
-    border: 1px solid darkgoldenrod;
-    border-radius: 4px;
-    background-color: rgba(21, 21, 21, .3);
-    color: darkgoldenrod;
-    font-size: 1rem;
-    transition: all 0.4s ease;
-}
-
-.form-group textarea {
-    min-height: 150px;
-    width: 100%;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-/* Reset flex for textarea container to stack vertically */
-.form-group:has(textarea) {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-}
-
-.form-group:has(textarea) label {
-    margin-bottom: 0.5rem;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: gold;
-    box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.2);
-}
-
-.form-group input:hover,
-.form-group textarea:hover {
-    background-color: rgba(184, 134, 11, 0.1);
-}
-
-.submit-btn {
-    background-color: rgba(21, 21, 21, .3);
-    backdrop-filter: blur(5px);
-    border: 1px solid darkgoldenrod;
-    color: darkgoldenrod;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.submit-btn:hover {
-    background-color: darkgoldenrod;
-    color: whitesmoke;
-}
-
+/* Thank you page styles */
 .thank-you-message {
     text-align: center;
     padding: 2rem;

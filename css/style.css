@@ -7,15 +7,20 @@
     src: url(../fonts/jmh_typewriter/JMH\ Typewriter-Thin.otf);
 }
 :root {
+    --bg-primary: #151515;
+    --bg-secondary: #181C14;
+    --text-color: whitesmoke;
+    --accent-color: darkgoldenrod;
+    --accent-hover: gold;
     overflow-x: hidden;
     scrollbar-width: none;
-    color: whitesmoke;
+    color: var(--text-color);
 }
 body {
     display: flex;
     flex-direction: column;
-    background: radial-gradient(ellipse at top, #181C14, #151515),
-            radial-gradient(ellipse at bottom, #151515, #181C14);
+    background: radial-gradient(ellipse at top, var(--bg-secondary), var(--bg-primary)),
+            radial-gradient(ellipse at bottom, var(--bg-primary), var(--bg-secondary));
     background-size: cover;
     margin: 0;
     height: 100dvh;
@@ -44,7 +49,7 @@ header #banner {
 h1, h2, h3 {
     font-family: typewriter;
     letter-spacing: 10px;
-    color: darkgoldenrod;
+    color: var(--accent-color);
 }
 header h1 {
     position: absolute;
@@ -56,7 +61,7 @@ header h1 {
     transform: translateY(calc(50% + 2rem));
     margin: 5px;
     padding: 0;
-    text-shadow: 1px 1px 2px #151515;
+    text-shadow: 1px 1px 2px var(--bg-primary);
 }
 nav {
     z-index: 1;
@@ -65,15 +70,15 @@ nav ul {
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
-    color: darkgoldenrod;
+    color: var(--accent-color);
 }
 nav li {
     display: flex;
     align-items: center;
 }
 nav li:hover {
-    color: gold;
-    text-shadow: 0px 7px 15px gold;
+    color: var(--accent-hover);
+    text-shadow: 0px 7px 15px var(--accent-hover);
 }
 a {
     text-decoration: none;
@@ -82,7 +87,7 @@ a {
 nav ul button {
     background-color: transparent;
     border: none;
-    color: darkgoldenrod;
+    color: var(--accent-color);
     margin: 0;
     padding: 0;
     display: flex;
@@ -98,8 +103,8 @@ main {
     position: relative;
     flex: 1 0 auto;
     z-index: 1;
-    background-color: #151515;
-    box-shadow: 1px 1px 10px #181C14;
+    background-color: var(--bg-primary);
+    box-shadow: 1px 1px 10px var(--bg-secondary);
     padding: 20px 20%;
     margin-bottom: 60px;
 }
@@ -156,7 +161,7 @@ hr {
     filter: blur(2px);
     z-index: -1;
     background-attachment: fixed;
-    border-radius: 50px;
+    border-radius: 10px;
     background-position: 50% 50%;
 }
 .transparentBG {
@@ -164,7 +169,7 @@ hr {
     margin: 0;
 }
 section {
-    border: 1px solid whitesmoke;
+    border: 1px solid var(--text-color);
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -207,9 +212,9 @@ section a {
 .StylizedBtn-1 {
     background-color: rgba(21, 21, 21, .3);
     backdrop-filter: blur(5px);
-    border: 1px solid darkgoldenrod;
+    border: 1px solid var(--accent-color);
     /* border: none; */
-    color: darkgoldenrod;
+    color: var(--accent-color);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -221,8 +226,8 @@ section a {
     border-radius: 5px;
 }
 .StylizedBtn-1:hover {
-    background-color: darkgoldenrod;
-    color: whitesmoke;
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
 }
 #about {
     text-align: center;
@@ -231,7 +236,7 @@ p {
     color: inherit;
 }
 footer {
-    color: darkgoldenrod;
+    color: var(--accent-color);
     width: 100%;
     margin-top: auto;
     padding: 20px 0;
@@ -258,11 +263,72 @@ nav {
         display: block;
         text-align: center;
         width: 100%;
-        border: 1px solid #151515;
+        border: 1px solid var(--accent-color);
     }
     nav ul li:nth-of-type(4) {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+/* Resume specific styles */
+#profile {
+    display: grid;
+    grid-template-columns: 200px repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px;
+    background-color: var(--accent-color);
+    column-gap: 10px;
+    row-gap: 0px;
+    color: var(--text-color);
+    font-family: typewriter-thin;
+    letter-spacing: 3px;
+    line-height: 30px;
+    max-width: 70dvw;
+    margin: 0 auto;
+}
+
+#profile img {
+    width: 100%;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    align-items: center;
+}
+
+#profile h2 {
+    color: var(--text-color);
+    grid-row: 1/2;
+    grid-column: 2/4;
+    margin: 5px;
+}
+
+#profile #bio {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#contact {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#download {
+    text-align: center;
+}
+
+#download a {
+    color: var(--accent-color);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#download a:hover {
+    border-radius: 5px;
+    color: var(--text-color);
+    box-shadow: 0 0 0 1px var(--accent-color);
 }
