@@ -37,8 +37,20 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+#download {
+    text-align: center;
+}
+#download > *{
+    color: darkgoldenrod;
+    padding: 5px;
+}
+#download:hover > *{
+    border-radius: 30px;
+    color: whitesmoke;
+    box-shadow: 0 0 0 1px darkgoldenrod;
+}
 @media only screen and (max-width: 1000px) {
     #profile img {
         display: none;
     }
-  }
+}

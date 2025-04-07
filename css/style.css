@@ -27,7 +27,8 @@ body {
 header {
     min-height: 200px;
     width: 100%;
-    order: 1;
+    /* position: absolute; */
+    order: 0;
 }
 header #banner {
     z-index: 1;
@@ -86,7 +87,7 @@ nav ul button {
     padding: 0;
     display: flex;
 }
-#subject {
+#banner-subject {
     z-index: 1;
     position: absolute;
     left: calc(50% - 150px);
@@ -95,13 +96,12 @@ nav ul button {
 }
 main {
     position: relative;
-    /* transform: translateY(-20px); */
-    order: 1;
-    min-height: 200px;
+    flex: 1 0 auto;
     z-index: 1;
     background-color: #151515;
     box-shadow: 1px 1px 10px #181C14;
     padding: 20px 20%;
+    margin-bottom: 60px;
 }
 main::before {
     content: "";
@@ -161,7 +161,6 @@ hr {
 }
 .transparentBG {
     backdrop-filter: blur(0px);
-    padding: 1px 20px;
     margin: 0;
 }
 section {
@@ -169,23 +168,61 @@ section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
+    position: relative;
+    min-height: 150px;
 }
 section::after {
     content: '';
     clear: both;
     display: block;
 }
+section h3 {
+    text-align: justify;
+    font-family: typewriter-thin;
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
 section img {
+    border-radius: 10px;
     margin-right: 20px;
     width: 150px;
     float: left;
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+section img:hover {
+    transform: scale(1.05); /* Scale up by 20% on hover */
 }
 section p:nth-of-type(even) {
     color: darkgray;
 }
 section a {
     display: block;
-    text-align: right;
+    width: fit-content;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+}
+.StylizedBtn-1 {
+    background-color: rgba(21, 21, 21, .3);
+    backdrop-filter: blur(5px);
+    border: 1px solid darkgoldenrod;
+    /* border: none; */
+    color: darkgoldenrod;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+.StylizedBtn-1:hover {
+    background-color: darkgoldenrod;
+    color: whitesmoke;
 }
 #about {
     text-align: center;
@@ -195,9 +232,9 @@ p {
 }
 footer {
     color: darkgoldenrod;
-    width: 100dvw;
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 0;
     text-align: center;
 }
 footer hr {
