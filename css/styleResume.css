@@ -42,10 +42,10 @@
 }
 #download > *{
     color: darkgoldenrod;
-    padding: 5px;
+    padding: 10px;
 }
 #download:hover > *{
-    border-radius: 30px;
+    border-radius: 10px;
     color: whitesmoke;
     box-shadow: 0 0 0 1px darkgoldenrod;
 }
