@@ -40,11 +40,11 @@
 #download {
     text-align: center;
 }
-#download > *{
+#download a {
     color: darkgoldenrod;
     padding: 10px;
 }
-#download > *:hover{
+#download a:hover{
     border-radius: 5px;
     color: whitesmoke;
     box-shadow: 0 0 0 1px darkgoldenrod;
