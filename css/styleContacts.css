@@ -249,3 +249,37 @@
 .back-btn:hover {
     opacity: 0.9;
 }
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        min-width: auto;
+        text-align: left;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .StylizedBtn-1 {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
