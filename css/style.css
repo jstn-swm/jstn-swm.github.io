@@ -173,12 +173,13 @@ hr {
     margin: 0;
 }
 section {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--accent-color);
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
     position: relative;
     min-height: 150px;
+    color: white;
 }
 section::after {
     content: '';
