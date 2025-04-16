@@ -1,231 +1,280 @@
 @font-face {
-    font-family: typewriter;
-    src: url(../fonts/jmh_typewriter/JMH\ Typewriter-Black.otf);
+  font-family: typewriter;
+  src: url(../fonts/jmh_typewriter/JMH\ Typewriter-Black.otf);
 }
 @font-face {
-    font-family: typewriter-thin;
-    src: url(../fonts/jmh_typewriter/JMH\ Typewriter-Thin.otf);
+  font-family: typewriter-thin;
+  src: url(../fonts/jmh_typewriter/JMH\ Typewriter-Thin.otf);
 }
 :root {
-    overflow-x: hidden;
-    scrollbar-width: none;
-    color: whitesmoke;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  color: whitesmoke;
+  box-sizing: border-box;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    background: radial-gradient(ellipse at top, #181C14, #151515),
-            radial-gradient(ellipse at bottom, #151515, #181C14);
-    background-size: cover;
-    margin: 0;
-    height: 100dvh;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at top, #181c14, #151515),
+    radial-gradient(ellipse at bottom, #151515, #181c14);
+  background-size: cover;
+  margin: 0;
+  height: 100dvh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 header {
-    min-height: 200px;
-    width: 100%;
-    order: 1;
+  margin-top: 30px;
+  min-height: 200px;
+  width: 100%;
+  order: 1;
 }
 header #banner {
-    z-index: 1;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    mix-blend-mode: color-dodge;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    background-image: url(../img/backdrop.jpg);
+  z-index: 1;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  mix-blend-mode: color-dodge;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-image: url(../img/backdrop.jpg);
 }
-h1, h2, h3 {
-    font-family: typewriter;
-    letter-spacing: 10px;
-    color: darkgoldenrod;
+h1,
+h2,
+h3 {
+  font-family: typewriter;
+  letter-spacing: 10px;
+  color: darkgoldenrod;
 }
 header h1 {
-    position: absolute;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  transform: translateY(calc(50% + 2rem));
+  margin: 5px;
+  padding: 0;
+  text-shadow: 1px 1px 2px #151515;
+}
+nav {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: min-content;
+  height: fit-content;
+  padding: 0px;
+  margin: 30px auto;
+  position: sticky;
+  top: 20px;
+  z-index: 3;
+  border-radius: 10px;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkgoldenrod;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-evenly;
+}
+nav li {
+  height: 80%;
+  width: 100px;
+  display: flex;
+  text-align: center;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+nav li:hover {
+  color: darkgoldenrod;
+  text-shadow: 0 3px 10px darkgoldenrod;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul button {
+  background-color: transparent;
+  border: none;
+  color: darkgoldenrod;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li svg {
+  display: block;
+}
+#subject {
+  z-index: 1;
+  top: 0px;
+  position: absolute;
+  left: calc(50% - 150px);
+  width: 300px;
+  filter: grayscale(1) brightness(0.2);
+}
+main {
+  position: relative;
+  /* transform: translateY(-20px); */
+  order: 1;
+  min-height: 200px;
+  z-index: 1;
+  background-color: #151515;
+  box-shadow: 1px 1px 10px #181c14;
+  padding: 20px 20%;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: -10px;
+  /* bottom: -10px; */
+  left: 0;
+  background: inherit;
+  filter: blur(2px);
+  clip-path: polygon(
+    0% 50%,
+    10% 20%,
+    20% 60%,
+    30% 35%,
+    40% 55%,
+    50% 30%,
+    60% 60%,
+    70% 40%,
+    80% 65%,
+    90% 30%,
+    100% 50%
+  );
+}
+main::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: -10px;
+  left: 0;
+  background: inherit;
+  filter: blur(2px);
+  clip-path: polygon(
+    0% 50%,
+    10% 30%,
+    20% 65%,
+    30% 35%,
+    40% 55%,
+    50% 30%,
+    60% 60%,
+    70% 40%,
+    80% 65%,
+    90% 30%,
+    100% 50%
+  );
+}
+h2 {
+  text-align: center;
+  font-size: large;
+}
+hr {
+  border-color: #1d1d1d;
+  margin: 30px 50px;
+  padding: 0;
+}
+.transparentBG {
+  border: 1px solid darkgoldenrod;
+  z-index: 1;
+  position: relative; /* Needed for pseudo-element */
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 30%;
+  overflow: hidden; /* Prevents the pseudo-element from overflowing */
+  background-color: transparent; /* Prevents the pseudo-element from overflowing */
+}
+
+.transparentBG::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/backdrop.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  mix-blend-mode: color-dodge;
+  z-index: -1;
+}
+.transparentBG:nth-of-type(even) {
+  float: right;
+}
+.transparentBG:nth-of-type(odd) {
+  float: left;
+}
+section {
+  border: 1px solid whitesmoke;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+section::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+section img {
+  margin-right: 20px;
+  width: 150px;
+  float: left;
+}
+section p:nth-of-type(even) {
+  color: darkgray;
+}
+section a {
+  display: block;
+  text-align: right;
+}
+#about {
+  text-align: center;
+}
+p {
+  color: inherit;
+}
+footer {
+  color: darkgoldenrod;
+  width: 100dvw;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+footer hr {
+  height: 2px;
+  background-color: currentColor;
+  border: none;
+}
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  nav ul li:nth-of-type(4) {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-    width: 100%;
-    transform: translateY(calc(50% + 2rem));
-    margin: 5px;
-    padding: 0;
-    text-shadow: 1px 1px 2px #151515;
-}
-nav {
-    z-index: 1;
-}
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    color: darkgoldenrod;
-}
-nav li {
-    display: flex;
-    align-items: center;
-}
-nav li:hover {
-    color: gold;
-    text-shadow: 0px 7px 15px gold;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-nav ul button {
-    background-color: transparent;
-    border: none;
-    color: darkgoldenrod;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-#subject {
-    z-index: 1;
-    position: absolute;
-    left: calc(50% - 150px);
-    width: 300px;
-    filter: grayscale(1) brightness(0.2);
-}
-main {
-    position: relative;
-    /* transform: translateY(-20px); */
-    order: 1;
-    min-height: 200px;
-    z-index: 1;
-    background-color: #151515;
-    box-shadow: 1px 1px 10px #181C14;
-    padding: 20px 20%;
-}
-main::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    top: -10px;
-    /* bottom: -10px; */
-    left: 0;
-    background: inherit;
-    filter: blur(2px);
-    clip-path: polygon(
-        0% 50%, 10% 20%, 20% 60%, 30% 35%, 
-        40% 55%, 50% 30%, 60% 60%, 70% 40%, 
-        80% 65%, 90% 30%, 100% 50%);
-}
-main::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    bottom: -10px;
-    left: 0;
-    background: inherit;
-    filter: blur(2px);
-    clip-path: polygon(
-        0% 50%, 10% 30%, 20% 65%, 30% 35%, 
-        40% 55%, 50% 30%, 60% 60%, 70% 40%, 
-        80% 65%, 90% 30%, 100% 50%
-    );
-}
-h2 {
-    text-align: center;
-    font-size: large;
-}
-hr {
-    border-color: #1d1d1d;
-    margin: 30px 50px;
-    padding: 0;
-}
-.transparentBG::after {
-    content: "";
-    position: absolute; /* Needed to stretch */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/backdrop.jpg);
-    background-size: cover;
-    background-position: center;
-    filter: blur(2px);
-    z-index: -1;
-    background-attachment: fixed;
-    border-radius: 50px;
-    background-position: 50% 50%;
-}
-.transparentBG {
-    backdrop-filter: blur(0px);
-    padding: 1px 20px;
-    margin: 0;
-}
-section {
-    border: 1px solid whitesmoke;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-}
-section::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-section img {
-    margin-right: 20px;
-    width: 150px;
-    float: left;
-}
-section p:nth-of-type(even) {
-    color: darkgray;
-}
-section a {
-    display: block;
-    text-align: right;
-}
-#about {
-    text-align: center;
-}
-p {
-    color: inherit;
-}
-footer {
-    color: darkgoldenrod;
-    width: 100dvw;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-}
-footer hr {
-    height: 2px;
-    background-color: currentColor;
-    border: none;
-}
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-@media screen and (max-width: 600px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    nav ul li {
-        display: block;
-        text-align: center;
-        width: 100%;
-        border: 1px solid #151515;
-    }
-    nav ul li:nth-of-type(4) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  }
 }

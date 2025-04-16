@@ -1,102 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.css"
+    />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <meta name="description" content="Justin Wang personal portfolio page">
-</head>
-<body>
-    <img src="./img/engin-akyurt-vJ0zS3nfmwU-unsplash-removebg-preview.png" alt="subject" id="subject">
-    <header>
-        <a href="./index.html"><h1>Syzygy</h1></a>
-        <div id="banner"></div>
-    </header>
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="description" content="Justin Wang personal portfolio page" />
+  </head>
+  <body>
+    <img
+      src="./img/engin-akyurt-vJ0zS3nfmwU-unsplash-removebg-preview.png"
+      alt="subject"
+      id="subject"
+    />
     <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li><button id="themeBtn" onclick="changeTheme();"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces" viewBox="0 0 16 16"><path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/></svg></button></li>
-        </ul>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="./contacts.html">Contacts</a></li>
+        <li>
+          <button id="themeBtn" onclick="changeTheme();">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.4em"
+              height="1.4em"
+              fill="currentColor"
+              class="bi bi-braces"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
     </nav>
+    <header>
+      <a href="./index.html"><h1>Syzygy</h1></a>
+      <div id="banner"></div>
+    </header>
     <main>
-        <div id="about">
-            <h2>About</h2>
-            <p>My name is Justin, a Computer Science student with a keen interest in programming, problem-solving, and building innovative applications. My current projects include a Pomodoro Timer, a Notes app, and my local community centre's swim timetable. I am driven by curiosity and a desire to create, both of which are crucial in software development.</p>
-        </div>
-        <hr>
-        <h2>Recent Projects</h2>
-        <div class="transparentBG">
-            <div id="projects">
-                <section class="project">
-                    <img src="./Screenshot_2025-03-01_at_02.05.42.png" alt="">
-                    <p>KuromiTimer is a simple Pomodoro timer app built with Electron. It helps you stay focused by following the Pomodoro Technique, with customizable time intervals for work and break sessions.</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/KuromiTimer">See More</a>
-                </section>
-                <section class="project">
-                    <div class="wrapper"></div>
-                    <p>SwimSchedule is a app build with Electron to quickly get available time tables to swim. Key-feature is highlighting best time to visit. Prevent wasting time and save a couple clicks! 😊</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/SwimSchedule">See More</a>
-                </section>
-                <section class="project">
-                    <img src="./Screenshot_2025-03-01_at_02.05.42.png" alt="">
-                    <p>KuromiTimer is a simple Pomodoro timer app built with Electron. It helps you stay focused by following the Pomodoro Technique, with customizable time intervals for work and break sessions.</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/KuromiTimer">See More</a>
-                </section>
-                <section class="project">
-                    <div class="wrapper"></div>
-                    <p>SwimSchedule is a app build with Electron to quickly get available time tables to swim. Key-feature is highlighting best time to visit. Prevent wasting time and save a couple clicks! 😊</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/SwimSchedule">See More</a>
-                </section>
-                <section class="project">
-                    <img src="./Screenshot_2025-03-01_at_02.05.42.png" alt="">
-                    <p>KuromiTimer is a simple Pomodoro timer app built with Electron. It helps you stay focused by following the Pomodoro Technique, with customizable time intervals for work and break sessions.</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/KuromiTimer">See More</a>
-                </section>
-                <section class="project">
-                    <div class="wrapper"></div>
-                    <p>SwimSchedule is a app build with Electron to quickly get available time tables to swim. Key-feature is highlighting best time to visit. Prevent wasting time and save a couple clicks! 😊</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/SwimSchedule">See More</a>
-                </section>
-                <section class="project">
-                    <img src="./Screenshot_2025-03-01_at_02.05.42.png" alt="">
-                    <p>KuromiTimer is a simple Pomodoro timer app built with Electron. It helps you stay focused by following the Pomodoro Technique, with customizable time intervals for work and break sessions.</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/KuromiTimer">See More</a>
-                </section>
-                <section class="project">
-                    <div class="wrapper"></div>
-                    <p>SwimSchedule is a app build with Electron to quickly get available time tables to swim. Key-feature is highlighting best time to visit. Prevent wasting time and save a couple clicks! 😊</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/SwimSchedule">See More</a>
-                </section>
-                <section class="project">
-                    <img src="./Screenshot_2025-03-01_at_02.05.42.png" alt="">
-                    <p>KuromiTimer is a simple Pomodoro timer app built with Electron. It helps you stay focused by following the Pomodoro Technique, with customizable time intervals for work and break sessions.</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/KuromiTimer">See More</a>
-                </section>
-                <section class="project">
-                    <div class="wrapper"></div>
-                    <p>SwimSchedule is a app build with Electron to quickly get available time tables to swim. Key-feature is highlighting best time to visit. Prevent wasting time and save a couple clicks! 😊</p>
-                    <p>Latest Build: 0.0.1</p>
-                    <a href="https://github.com/jstn-swm/SwimSchedule">See More</a>
-                </section>
-            </div>
-        </div>
+      <div id="about">
+        <h2>About</h2>
+        <p>
+          My name is Justin, a Computer Science student with a keen interest in
+          programming, problem-solving, and building innovative applications. My
+          current projects include a Pomodoro Timer, a Notes app, and my local
+          community centre's swim timetable. I am driven by curiosity and a
+          desire to create, both of which are crucial in software development.
+        </p>
+      </div>
+      <hr />
+      <h2>Recent Projects</h2>
+      <div class="transparentBG">
+        <div id="projects"></div>
+      </div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
+      <div class="transparentBG"></div>
     </main>
     <footer>
-        <hr>
-        <p>&copy;<i>justin.won1214+work@gmail.com</i></p>
+      <hr />
+      <p>&copy;<i>justin.won1214+work@gmail.com</i></p>
     </footer>
-</body>
+  </body>
 </html>
