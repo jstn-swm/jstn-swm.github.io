@@ -9,45 +9,65 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/styleResume.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.css"
+    />
     <title>Resume</title>
   </head>
   <body>
-    <header>
-      <a href="./index.html"><h1>Course Project</h1></a>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./resume.html">Resume</a></li>
-        <li><a href="./contacts.html">Contacts</a></li>
-        <li>
-          <button id="themeBtn" onclick="changeTheme();">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-braces"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"
-              />
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <!-- Navigation at the top -->
+    <nav class="main-nav top-nav"></nav>
+
+    <!-- Header/Banner -->
+    <header></header>
     <main>
-      <form action=""></form>
-      <h2>Resume</h2>
-      <!-- <img width="100%" src="./Resume/InternshipResume-2.png" alt="Resume"> -->
-      <!-- <p><a href="./Resume/InternshipResume-3.pdf" download>Download</a></p> -->
-      <h3>Available Upon Request</h3>
+      <p>Resume Available Upon Request</p>
+      <hr/>
+
+      <!-- Added Skills & Technologies section -->
+      <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill-list">
+              <span class="skill">JavaScript</span>
+              <span class="skill">Python</span>
+              <span class="skill">Java</span>
+              <span class="skill">C++</span>
+              <span class="skill">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Frameworks & Libraries</h3>
+            <div class="skill-list">
+              <span class="skill">React</span>
+              <span class="skill">Node.js</span>
+              <span class="skill">Express</span>
+              <span class="skill">Bootstrap</span>
+              <span class="skill">jQuery</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-list">
+              <span class="skill">Git</span>
+              <span class="skill">VS Code</span>
+              <span class="skill">MongoDB</span>
+              <span class="skill">Firebase</span>
+              <span class="skill">AWS</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <hr />
       <p>&copy;<i>justin.won1214+work@gmail.com</i></p>
     </footer>
+    <script src="./js/common.js" defer></script>
   </body>
 </html>
