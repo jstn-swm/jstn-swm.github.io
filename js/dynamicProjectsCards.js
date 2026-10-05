@@ -23,7 +23,7 @@ function renderProjects(repos) {
         const imageUrl = `https://media.githubusercontent.com/media/jstn-swm/${repo.name}/main/preview.png`;
         card.className = 'project-card';
         card.innerHTML = `
-        <div class="project-image"><img src="${imageUrl}" alt="${repo.name} preview" onerror="this.style.display='none'"/></div>
+        <div class="project-image"><img object-fit="cover" src="${imageUrl}" alt="${repo.name} preview" onerror="this.style.display='none'"/></div>
         <div class="project-details">
             <h3>${repo.name}</h3>
             <p>${repo.description ?? "No Description."}</p>
