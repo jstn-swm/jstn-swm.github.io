@@ -20,7 +20,7 @@ function renderProjects(repos) {
     repos.forEach(repo => {
         const card = document.createElement('div');
         const topics = repo.topics?.map(t=> `<span class="tag">${t}</span>`).join('') ?? '';
-        const imageUrl = `https://media.githubusercontent.com/media/jstn-swm/${repo.name}/main/preview.png`;
+        const imageUrl = `https://raw.githubusercontent.com/media/jstn-swm/${repo.name}/${repo.default_branch}/preview.png`;
         card.className = 'project-card';
         card.innerHTML = `
         <div class="project-image"><img object-fit="cover" src="${imageUrl}" alt="${repo.name} preview" onerror="this.style.display='none'"/></div>
